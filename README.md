@@ -26,19 +26,19 @@ c：多用组合，少用继承。\
 策略模式定义了算法族，分别封装起来，让他们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。
 
 2. 观察者模式：\
-链接： http://www.unclewang.info/note/headfirst/453/\
+链接： http://www.unclewang.info/note/headfirst/453/ \
 题例：气象检测应用\
 原则：为了交互对象之间松耦合设计而努力。\
 观察者模式 定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会受到通知并自动更新。
 
 3. 装饰者模式：\
-链接：http://www.unclewang.info/note/headfirst/456/\
+链接：http://www.unclewang.info/note/headfirst/456/ \
 题例：星巴兹咖啡连锁店\
 原则：类应该对扩展开放，对修改关闭。（开放-关闭原则）\
 装饰者模式动态地将责任附加到对象上。若要扩展功能，装饰者提供了比继承更有弹性的替代方案。
 
 4. 工厂模式：\
-链接： http://www.unclewang.info/note/headfirst/467/\
+链接： http://www.unclewang.info/note/headfirst/467/ \
 题例：披萨店\
 原则：要依赖抽象，不要依赖具体类。（依赖倒置原则）\
 抽象工厂模式提供一个接口，用于创建相关或依赖对象的家族，而不需要明确指定具体类。
