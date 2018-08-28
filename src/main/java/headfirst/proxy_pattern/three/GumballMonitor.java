@@ -12,6 +12,7 @@ public class GumballMonitor {
     public void report() {
         try {
             System.out.println(gumballMachine.getLocation());
+            System.out.println(gumballMachine.getCount());
         } catch (RemoteException e) {
             e.printStackTrace();
         }

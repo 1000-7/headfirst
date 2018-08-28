@@ -8,4 +8,5 @@ public interface GumballMachineRemote extends Remote {
     public String getLocation() throws RemoteException;
     public State getState() throws RemoteException;
 
+
 }

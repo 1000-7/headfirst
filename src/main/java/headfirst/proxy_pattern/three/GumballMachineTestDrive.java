@@ -15,10 +15,18 @@ public class GumballMachineTestDrive {
         try {
             count = Integer.parseInt(args[1]);
             gumballMachine = new GumballMachine(args[0], count);
-            Naming.rebind("gumballmachine", gumballMachine);
+            Naming.rebind("//" + "192.168.1.7" + "/gumballmachine", gumballMachine);
+            while (gumballMachine.getCount() > 0) {
+                ((GumballMachine) gumballMachine).insertQuarter();
+                ((GumballMachine) gumballMachine).turnCrank();
+                System.out.println(gumballMachine.getCount());
+                Thread.sleep(2000);
+            }
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
