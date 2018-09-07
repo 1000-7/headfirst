@@ -2,6 +2,7 @@
 
 #### 项目介绍
 《Head First设计模式》读书笔记代码实现
+官网地址: http://www.wickedlysmart.com/head-first-design-patterns/ 里面直接有源代码
 
 #### OO设计原则（面向对象）
 1. 找出应用中可能需要变化指出，把他们独立出来，不要和那些不需要变化的代码混在一起
