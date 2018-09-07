@@ -1,7 +1,7 @@
 # headfirst项目介绍
 
 #### 项目介绍
-《Head First设计模式》读书笔记代码实现
+《Head First设计模式》读书笔记代码实现 \
 官网地址: http://www.wickedlysmart.com/head-first-design-patterns/ 里面直接有源代码
 
 #### OO设计原则（面向对象）
