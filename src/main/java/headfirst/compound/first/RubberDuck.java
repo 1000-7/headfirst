@@ -1,0 +1,8 @@
+package headfirst.compound.first;
+
+public class RubberDuck implements Quackable {
+    @Override
+    public void quack() {
+        System.out.println("橡皮");
+    }
+}
