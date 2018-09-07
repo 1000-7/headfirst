@@ -8,23 +8,28 @@ public class DJViewServlet extends HttpServlet {
 
     private static final long serialVersionUID = 2L;
 
+    @Override
     public void init() throws ServletException {
         BeatModel beatModel = new BeatModel();
+        System.out.println(beatModel.getSs());
         beatModel.initialize();
         getServletContext().setAttribute("beatModel", beatModel);
     }
 
+    @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws IOException, ServletException {
         doPost(request, response);
     }
 
+    @Override
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws IOException, ServletException {
         BeatModel beatModel =
                 (BeatModel) getServletContext().getAttribute("beatModel");
+
 
         String bpm = request.getParameter("bpm");
         if (bpm == null) {

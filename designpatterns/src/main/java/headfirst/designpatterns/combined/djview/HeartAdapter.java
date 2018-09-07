@@ -7,6 +7,7 @@ public class HeartAdapter implements BeatModelInterface {
         this.heart = heart;
     }
 
+    @Override
     public void initialize() {
     }
 
@@ -16,10 +17,12 @@ public class HeartAdapter implements BeatModelInterface {
     public void off() {
     }
 
+    @Override
     public int getBPM() {
         return heart.getHeartRate();
     }
 
+    @Override
     public void setBPM(int bpm) {
     }
 
@@ -27,6 +30,7 @@ public class HeartAdapter implements BeatModelInterface {
         heart.registerObserver(o);
     }
 
+    @Override
     public void removeObserver(BeatObserver o) {
         heart.removeObserver(o);
     }
@@ -35,6 +39,7 @@ public class HeartAdapter implements BeatModelInterface {
         heart.registerObserver(o);
     }
 
+    @Override
     public void removeObserver(BPMObserver o) {
         heart.removeObserver(o);
     }

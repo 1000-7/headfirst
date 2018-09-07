@@ -13,6 +13,7 @@ public class BeatBar extends JProgressBar implements Runnable {
         thread.start();
     }
 
+    @Override
     public void run() {
         for (; ; ) {
             int value = getValue();

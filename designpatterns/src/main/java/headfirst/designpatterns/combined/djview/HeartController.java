@@ -13,18 +13,23 @@ public class HeartController implements ControllerInterface {
         view.disableStartMenuItem();
     }
 
+    @Override
     public void start() {
     }
 
+    @Override
     public void stop() {
     }
 
+    @Override
     public void increaseBPM() {
     }
 
+    @Override
     public void decreaseBPM() {
     }
 
+    @Override
     public void setBPM(int bpm) {
     }
 }

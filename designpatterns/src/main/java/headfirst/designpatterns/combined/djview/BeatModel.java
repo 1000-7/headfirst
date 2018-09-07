@@ -8,29 +8,40 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     ArrayList<BeatObserver> beatObservers = new ArrayList<BeatObserver>();
     ArrayList<BPMObserver> bpmObservers = new ArrayList<BPMObserver>();
     int bpm = 90;
+    String ss;
+
+    public String getSs() {
+        return ss;
+    }
+
     Sequence sequence;
     Track track;
 
+    @Override
     public void initialize() {
         setUpMidi();
         buildTrackAndStart();
     }
 
+    @Override
     public void on() {
         System.out.println("Starting the sequencer");
         sequencer.start();
         setBPM(90);
     }
 
+    @Override
     public void off() {
         setBPM(0);
         sequencer.stop();
     }
 
+    @Override
     public int getBPM() {
         return bpm;
     }
 
+    @Override
     public void setBPM(int bpm) {
         this.bpm = bpm;
         sequencer.setTempoInBPM(getBPM());
@@ -42,6 +53,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
 
+    @Override
     public void registerObserver(BeatObserver o) {
         beatObservers.add(o);
     }
@@ -53,6 +65,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
         }
     }
 
+    @Override
     public void registerObserver(BPMObserver o) {
         bpmObservers.add(o);
     }
@@ -65,6 +78,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
 
+    @Override
     public void removeObserver(BeatObserver o) {
         int i = beatObservers.indexOf(o);
         if (i >= 0) {
@@ -73,6 +87,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
 
+    @Override
     public void removeObserver(BPMObserver o) {
         int i = bpmObservers.indexOf(o);
         if (i >= 0) {
@@ -81,6 +96,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
 
+    @Override
     public void meta(MetaMessage message) {
         if (message.getType() == 47) {
             beatEvent();

@@ -36,6 +36,7 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
         }
     }
 
+    @Override
     public void display() {
         System.out.println("Heat index is " + heatIndex);
     }

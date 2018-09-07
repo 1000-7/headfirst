@@ -64,6 +64,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         startMenuItem = new JMenuItem("Start");
         menu.add(startMenuItem);
         startMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent event) {
                 controller.start();
             }
@@ -71,12 +72,14 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         stopMenuItem = new JMenuItem("Stop");
         menu.add(stopMenuItem);
         stopMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent event) {
                 controller.stop();
             }
         });
         JMenuItem exit = new JMenuItem("Quit");
         exit.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent event) {
                 System.exit(0);
             }
@@ -136,6 +139,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         startMenuItem.setEnabled(false);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == setBPMButton) {
             int bpm = Integer.parseInt(bpmTextField.getText());
@@ -147,6 +151,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         }
     }
 
+    @Override
     public void updateBPM() {
         if (model != null) {
             int bpm = model.getBPM();
@@ -162,6 +167,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         }
     }
 
+    @Override
     public void updateBeat() {
         if (beatBar != null) {
             beatBar.setValue(100);
